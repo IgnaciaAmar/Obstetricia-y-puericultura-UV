@@ -64,30 +64,39 @@ const contenedor = document.getElementById('contenedor-malla');
 
 function renderizar() {
     contenedor.innerHTML = '';
-    ramos.forEach(ramo => {
-        const div = document.createElement('div');
-        div.className = 'ramo';
-        
-        const requisitosCumplidos = ramo.prerequisitos.every(preId => 
-            ramos.find(r => r.id === preId && r.aprobado)
-        );
-        
-        if (ramo.aprobado) div.classList.add('aprobado');
-        else if (requisitosCumplidos) div.classList.add('disponible');
-        else div.classList.add('bloqueado');
-        
-        div.innerHTML = `<strong>${ramo.nombre}</strong><br>${ramo.id}`;
-        div.onclick = () => {
-            if (ramo.aprobado || requisitosCumplidos) {
-                ramo.aprobado = !ramo.aprobado;
-                renderizar();
-            } else {
-                alert('¡Primero debes aprobar los prerrequisitos!');
+    const tabla = document.createElement('table');
+    tabla.className = 'tabla-malla';
+    tabla.innerHTML = `<thead><tr><th colspan="2">1° AÑO</th><th colspan="2">2° AÑO</th><th colspan="2">3° AÑO</th><th colspan="2">4° AÑO</th></tr><tr><th>1° Sem</th><th>2° Sem</th><th>3° Sem</th><th>4° Sem</th><th>5° Sem</th><th>6° Sem</th><th>7° Sem</th><th>8° Sem</th></tr></thead><tbody id="cuerpo-tabla"></tbody>`;
+    const tbody = tabla.querySelector('#cuerpo-tabla');
+
+    for (let fila = 0; fila < 10; fila++) {
+        const tr = document.createElement('tr');
+        for (let sem = 1; sem <= 8; sem++) {
+            const td = document.createElement('td');
+            const ramo = ramos.filter(r => r.semestre === sem)[fila];
+            if (ramo) {
+                const div = document.createElement('div');
+                div.className = 'ramo';
+                const requisitosCumplidos = ramo.prerequisitos.length === 0 || ramo.prerequisitos.every(preId => ramos.find(r => r.id === preId && r.aprobado));
+                if (ramo.aprobado) div.classList.add('aprobado');
+                else if (requisitosCumplidos) div.classList.add('disponible');
+                else div.classList.add('bloqueado');
+                div.innerHTML = `<strong>${ramo.nombre}</strong><br>${ramo.id}`;
+                div.onclick = () => {
+                    if (ramo.aprobado || requisitosCumplidos) {
+                        ramo.aprobado = !ramo.aprobado;
+                        renderizar();
+                    } else {
+                        alert('¡Primero debes aprobar los prerrequisitos!');
+                    }
+                };
+                td.appendChild(div);
             }
-        };
-        contenedor.appendChild(div);
-    });
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    }
+    contenedor.appendChild(tabla);
 }
 
 document.addEventListener('DOMContentLoaded', renderizar);
-

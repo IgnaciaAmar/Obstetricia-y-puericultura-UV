@@ -14,7 +14,7 @@ body { font-family: sans-serif; padding: 20px; background-color: #fcfcfc; }
     transition: background-color 0.3s ease;
 }
 
-/* COLORES PERSONALIZADOS */
+/* COLORES */
 .bloqueado { background-color: #e0e0e0; border-color: #bdbdbd; color: #757575; } /* Gris */
 .disponible { background-color: #b3e5fc; border-color: #4fc3f7; color: #0277bd; } /* Celeste */
 .aprobado { background-color: #d1c4e9; border-color: #9575cd; color: #4527a0; } /* Morado */

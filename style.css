@@ -1,20 +1,23 @@
-body { font-family: sans-serif; padding: 20px; background-color: #fcfcfc; }
+body { font-family: sans-serif; padding: 20px; background-color: #f4f4f9; }
 
-.tabla-malla { border-collapse: collapse; width: 100%; margin-top: 20px; table-layout: fixed; }
-.tabla-malla th, .tabla-malla td { border: 1px solid #ccc; padding: 5px; text-align: center; vertical-align: top; width: 12.5%; }
-.tabla-malla th { background-color: #f4f4f4; font-size: 0.85em; }
+.tabla-malla { border-collapse: separate; border-spacing: 5px; width: 100%; margin-top: 20px; table-layout: fixed; }
+.tabla-malla th, .tabla-malla td { border: none; padding: 5px; text-align: center; vertical-align: top; width: 10%; }
+.tabla-malla th { background-color: #333; color: white; padding: 10px; border-radius: 5px; font-size: 0.8em; }
 
 .ramo { 
-    padding: 8px; 
-    border-radius: 6px; 
+    padding: 10px; 
+    border-radius: 8px; 
     cursor: pointer; 
     font-size: 0.7em; 
-    margin-bottom: 5px;
-    border: 1px solid #999;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-bottom: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Sombra para profundidad */
+    transition: transform 0.2s;
 }
 
-/* COLORES */
-.bloqueado { background-color: #e0e0e0; border-color: #bdbdbd; color: #757575; } /* Gris */
-.disponible { background-color: #b3e5fc; border-color: #4fc3f7; color: #0277bd; } /* Celeste */
-.aprobado { background-color: #d1c4e9; border-color: #9575cd; color: #4527a0; } /* Morado */
+.ramo:hover { transform: scale(1.05); } /* Efecto al pasar el mouse */
+
+/* COLORES VIBRANTES */
+.bloqueado { background-color: #bdbdbd; border: 2px solid #9e9e9e; color: #555; } /* Gris más oscuro */
+.disponible { background-color: #03a9f4; border: 2px solid #0288d1; color: white; } /* Celeste fuerte */
+.aprobado { background-color: #7e57c2; border: 2px solid #5e35b1; color: white; } /* Morado intenso */

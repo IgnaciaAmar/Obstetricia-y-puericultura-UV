@@ -2,7 +2,7 @@ body { font-family: sans-serif; padding: 20px; background-color: #f4f4f9; }
 
 .tabla-malla { border-collapse: separate; border-spacing: 5px; width: 100%; margin-top: 20px; table-layout: fixed; }
 .tabla-malla th, .tabla-malla td { border: none; padding: 5px; text-align: center; vertical-align: top; width: 10%; }
-.tabla-malla th { background-color: #333; color: white; padding: 10px; border-radius: 5px; font-size: 0.8em; }
+.tabla-malla th { background-color: #333; color: light pink; padding: 10px; border-radius: 5px; font-size: 0.8em; }
 
 .ramo { 
     padding: 10px; 

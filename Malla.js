@@ -89,4 +89,5 @@ function renderizar() {
     });
 }
 
-renderizar();
+document.addEventListener('DOMContentLoaded', renderizar);
+

@@ -2,7 +2,6 @@ body { font-family: sans-serif; padding: 20px; }
 #contenedor-malla { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; }
 .ramo { padding: 15px; border: 2px solid #ccc; cursor: pointer; border-radius: 8px; background-color: #f9f9f9; text-align: center; }
 
-/* Colores según estado */
-.aprobado { background-color: #d4edda; border-color: #28a745; } /* Verde */
-.bloqueado { background-color: #f8d7da; border-color: #dc3545; } /* Rojo */
-.disponible { background-color: #fff3cd; border-color: #ffc107; } /* Amarillo */
+.aprobado { background-color: #d4edda; border-color: #28a745; }
+.bloqueado { background-color: #f8d7da; border-color: #dc3545; }
+.disponible { background-color: #fff3cd; border-color: #ffc107; }

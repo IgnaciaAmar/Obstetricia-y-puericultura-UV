@@ -1,27 +1,20 @@
 body { font-family: sans-serif; padding: 20px; background-color: #fcfcfc; }
 
-.grid-malla { 
-    display: grid; 
-    grid-template-columns: repeat(8, 1fr); 
-    gap: 10px; 
-    align-items: start;
-}
-
-.columna-semestre h3 { font-size: 0.9em; text-align: center; color: #444; margin-bottom: 5px; }
-.columna-semestre h4 { font-size: 0.8em; text-align: center; color: #666; margin-top: 0; }
+.tabla-malla { border-collapse: collapse; width: 100%; margin-top: 20px; table-layout: fixed; }
+.tabla-malla th, .tabla-malla td { border: 1px solid #ccc; padding: 5px; text-align: center; vertical-align: top; width: 12.5%; }
+.tabla-malla th { background-color: #f4f4f4; font-size: 0.85em; }
 
 .ramo { 
-    padding: 10px; 
-    margin-bottom: 8px;
-    border: 1px solid #ccc; 
+    padding: 8px; 
+    border-radius: 6px; 
     cursor: pointer; 
-    border-radius: 8px; 
-    text-align: center;
-    font-size: 0.75em;
-    transition: all 0.3s ease; /* Para que el cambio de color sea suave */
+    font-size: 0.7em; 
+    margin-bottom: 5px;
+    border: 1px solid #999;
+    transition: background-color 0.3s ease;
 }
 
-/* COLORES QUE PEDISTE */
+/* COLORES PERSONALIZADOS */
 .bloqueado { background-color: #e0e0e0; border-color: #bdbdbd; color: #757575; } /* Gris */
-.disponible { background-color: #d1c4e9; border-color: #9575cd; color: #4527a0; } /* Morado */
-.aprobado { background-color: #c8e6c9; border-color: #4caf50; color: #2e7d32; } /* Verde */
+.disponible { background-color: #b3e5fc; border-color: #4fc3f7; color: #0277bd; } /* Celeste */
+.aprobado { background-color: #d1c4e9; border-color: #9575cd; color: #4527a0; } /* Morado */

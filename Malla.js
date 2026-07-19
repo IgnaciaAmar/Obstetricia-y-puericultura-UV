@@ -64,6 +64,10 @@ const ramos = [
     {id: "MAT522", nombre: "Internado en Salud Familiar y Gestión II", semestre: 10, prerequisitos: ["MAT421", "MAT422", "MAT423", "MAT425", "MAT426"], aprobado: false}
 ];
 
+// Cargar estado guardado
+const guardado = JSON.parse(localStorage.getItem('mallaUV')) || {};
+ramos.forEach(r => { if(guardado[r.id]) r.aprobado = true; });
+
 const contenedor = document.getElementById('contenedor-malla');
 
 function renderizar() {
@@ -89,10 +93,12 @@ function renderizar() {
                 div.onclick = () => {
                     if (ramo.aprobado || requisitosCumplidos) {
                         ramo.aprobado = !ramo.aprobado;
+                        // Guardar en localStorage
+                        const estado = {};
+                        ramos.forEach(r => { if(r.aprobado) estado[r.id] = true; });
+                        localStorage.setItem('mallaUV', JSON.stringify(estado));
                         renderizar();
-                    } else {
-                        alert('¡Primero debes aprobar los prerrequisitos!');
-                    }
+                    } else { alert('¡Primero debes aprobar los prerrequisitos!'); }
                 };
                 td.appendChild(div);
             }

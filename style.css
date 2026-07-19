@@ -1,7 +1,27 @@
-body { font-family: sans-serif; padding: 20px; }
-#contenedor-malla { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; }
-.ramo { padding: 15px; border: 2px solid #ccc; cursor: pointer; border-radius: 8px; background-color: #f9f9f9; text-align: center; }
+body { font-family: sans-serif; padding: 20px; background-color: #fcfcfc; }
 
-.aprobado { background-color: #d4edda; border-color: #28a745; }
-.bloqueado { background-color: #f8d7da; border-color: #dc3545; }
-.disponible { background-color: #fff3cd; border-color: #ffc107; }
+.grid-malla { 
+    display: grid; 
+    grid-template-columns: repeat(8, 1fr); 
+    gap: 10px; 
+    align-items: start;
+}
+
+.columna-semestre h3 { font-size: 0.9em; text-align: center; color: #444; margin-bottom: 5px; }
+.columna-semestre h4 { font-size: 0.8em; text-align: center; color: #666; margin-top: 0; }
+
+.ramo { 
+    padding: 10px; 
+    margin-bottom: 8px;
+    border: 1px solid #ccc; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    text-align: center;
+    font-size: 0.75em;
+    transition: all 0.3s ease; /* Para que el cambio de color sea suave */
+}
+
+/* COLORES QUE PEDISTE */
+.bloqueado { background-color: #e0e0e0; border-color: #bdbdbd; color: #757575; } /* Gris */
+.disponible { background-color: #d1c4e9; border-color: #9575cd; color: #4527a0; } /* Morado */
+.aprobado { background-color: #c8e6c9; border-color: #4caf50; color: #2e7d32; } /* Verde */

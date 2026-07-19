@@ -1,1 +1,126 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>Malla</title><link rel="stylesheet" href="style.css"></head><body><h1>Malla Obstetricia UV</h1><div id="malla"></div><script src="malla.js"></script><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Interactiva | Obstetricia y Puericultura UV</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="titulo">
+
+        <h1>Obstetricia y Puericultura</h1>
+
+        <p>Universidad de Valparaíso</p>
+
+    </div>
+
+    <div class="estadisticas">
+
+        <div class="dato">
+
+            <span id="porcentaje">0%</span>
+
+            <small>Completado</small>
+
+        </div>
+
+        <div class="dato">
+
+            <span id="creditos">0</span>
+
+            <small>Créditos</small>
+
+        </div>
+
+        <div class="dato">
+
+            <span id="ramos">0</span>
+
+            <small>Ramos</small>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="barra">
+
+    <div id="barraProgreso"></div>
+
+</section>
+
+<section class="herramientas">
+
+<input
+type="text"
+id="buscar"
+placeholder="Buscar ramo...">
+
+<button id="modoOscuro">
+
+🌙 Modo oscuro
+
+</button>
+
+<button id="reiniciar">
+
+🔄 Reiniciar
+
+</button>
+
+</section>
+
+<main>
+
+<div id="malla">
+
+<!-- Los semestres aparecerán automáticamente -->
+
+</div>
+
+</main>
+
+<div id="modal" class="oculto">
+
+<div class="contenidoModal">
+
+<span id="cerrar">&times;</span>
+
+<h2 id="nombreRamo"></h2>
+
+<p id="codigoRamo"></p>
+
+<p id="creditosRamo"></p>
+
+<p id="prerrequisitos"></p>
+
+<p id="descripcion"></p>
+
+</div>
+
+</div>
+
+<footer>
+
+Creado por Ignacia Amar • Malla Interactiva UV
+
+</footer>
+
+<script src="malla.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

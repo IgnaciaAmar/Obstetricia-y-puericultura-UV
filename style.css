@@ -1,23 +1,43 @@
-body { font-family: sans-serif; padding: 20px; background-color: #f4f4f9; }
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    padding: 20px; 
+    background-color: #f3e5f5; /* Fondo morado clarito */
+    color: #333;
+}
 
-.tabla-malla { border-collapse: separate; border-spacing: 5px; width: 100%; margin-top: 20px; table-layout: fixed; }
-.tabla-malla th, .tabla-malla td { border: none; padding: 5px; text-align: center; vertical-align: top; width: 10%; }
-.tabla-malla th { background-color: #333; color: light pink; padding: 10px; border-radius: 5px; font-size: 0.8em; }
+h1 { text-align: center; color: #4a148c; }
+
+.tabla-malla { 
+    border-collapse: separate; 
+    border-spacing: 6px; 
+    width: 100%; 
+    margin-top: 20px; 
+    table-layout: fixed; 
+}
+
+.tabla-malla th { 
+    background-color: #7b1fa2; 
+    color: white; 
+    padding: 10px; 
+    border-radius: 6px; 
+    font-size: 0.8em; 
+}
 
 .ramo { 
     padding: 10px; 
     border-radius: 8px; 
     cursor: pointer; 
-    font-size: 0.7em; 
-    font-weight: bold;
-    margin-bottom: 8px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Sombra para profundidad */
+    font-size: 0.65em; 
+    font-weight: bold; 
+    text-align: center; 
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); 
+    border: 1px solid #ccc; 
     transition: transform 0.2s;
 }
 
-.ramo:hover { transform: scale(1.05); } /* Efecto al pasar el mouse */
+.ramo:hover { transform: scale(1.03); }
 
-/* COLORES VIBRANTES */
-.bloqueado { background-color: #bdbdbd; border: 2px solid #9e9e9e; color: #555; } /* Gris más oscuro */
-.disponible { background-color: #03a9f4; border: 2px solid #0288d1; color: white; } /* Celeste fuerte */
-.aprobado { background-color: #7e57c2; border: 2px solid #5e35b1; color: white; } /* Morado intenso */
+/* COLORES */
+.bloqueado { background-color: #bdbdbd; color: #444; } /* Gris */
+.disponible { background-color: #03a9f4; color: white; } /* Celeste */
+.aprobado { background-color: #7e57c2; color: white; } /* Morado */
